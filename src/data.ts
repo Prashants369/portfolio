@@ -297,14 +297,14 @@ export const projects: Project[] = [
   },
   {
     id: "ai-factory",
-    title: "AI Factory: Automation Engine",
+    title: "AI Factory",
     category: "AI Automation / Full Stack",
     thumbnail: "/projects/ai-factory/factory_dashboard_v2.png",
-    description: "A research automation engine designed for systematic content analysis and generation workflows.",
-    longDescription: "The AI Factory is an automation ecosystem for digital research and content orchestration. It features a Next.js dashboard integrated with a FastAPI backend, coordinating automation chains for trend analysis and visual documentation using GPU-accelerated pipelines.",
+    description: "Dashboard for automating content research, trend analysis, and AI-powered image generation.",
+    longDescription: "The AI Factory is a Next.js dashboard with a FastAPI backend that automates content research workflows. It connects to ComfyUI for GPU-accelerated image generation, tracks trends, and manages scheduling — reducing manual research from hours to minutes.",
     tools: ["Next.js", "FastAPI", "Python", "ComfyUI / Flux", "SQLite", "Redis"],
     year: "2025",
-    role: "AI Developer & Architect",
+    role: "Full Stack Developer",
     persona: "AI",
     gallery: [
       "/projects/ai-factory/factory_dashboard_v2.png",
@@ -339,14 +339,14 @@ export const projects: Project[] = [
   },
   {
     id: "design-flow",
-    title: "Design Flow: Professional CRM Suite",
-    category: "Full Stack / SaaS Design",
+    title: "Design Flow",
+    category: "Frontend / UI Design",
     thumbnail: "/projects/design-flow/dashboard_premium.png",
-    description: "A professional CRM and project management suite designed for creative agencies.",
-    longDescription: "Design Flow is a SaaS dashboard designed to streamline creative workflows. It features a polished interface built with React and Framer Motion, integrating Kanban systems, financial tracking, and real-time project analytics.",
+    description: "CRM and project management dashboard with Kanban boards, invoicing, and analytics.",
+    longDescription: "Design Flow is a SaaS dashboard UI built with React and Framer Motion. Features include a Kanban project board, invoice management, financial tracking charts, and a polished login flow.",
     tools: ["React", "TypeScript", "Framer Motion", "Tailwind CSS", "Zustand"],
     year: "2025",
-    role: "Lead Frontend Developer",
+    role: "Frontend Developer",
     persona: "AI",
     gallery: [
       "/projects/design-flow/dashboard_premium.png",
@@ -371,11 +371,11 @@ export const projects: Project[] = [
   },
   {
     id: "texgen-ai",
-    title: "TexGen AI: Material Automation Engine",
-    category: "AI Automation / 3D Workflows",
+    title: "TexGen AI",
+    category: "AI + 3D Workflows",
     thumbnail: "/projects/texgen ai/Screenshot 2026-04-26 193320.png",
-    description: "Automated PBR texture generation system featuring real-time 3D visualization.",
-    longDescription: "TexGen AI automates 3D material workflows by generating PBR maps from text prompts. It includes a Three.js previewer for material validation and a distributed processing backend for batch generation.",
+    description: "Text-to-texture tool that generates PBR maps with real-time 3D preview.",
+    longDescription: "TexGen AI generates PBR texture sets (Albedo, Normal, Roughness, Displacement) from text descriptions. Includes a Three.js viewer with Parallax Occlusion Mapping for instant material preview, plus a FastAPI backend for batch processing.",
     gallery: [
       "/projects/texgen ai/Screenshot 2026-04-26 193320.png",
       "/projects/texgen ai/Screenshot 2026-04-26 193506.png",
@@ -385,18 +385,18 @@ export const projects: Project[] = [
     sections: [
       {
         title: "01. Material Generation",
-        description: "Generating coordinated PBR maps using generative models based on user-defined material properties.",
+        description: "Generates coordinated PBR maps from text prompts using Stable Diffusion with automatic tiling and seam removal.",
         images: ["/projects/texgen ai/Screenshot 2026-04-26 193320.png"]
       },
       {
         title: "02. Real-time 3D Preview",
-        description: "Integrated Three.js powered previewer for material validation, supporting dynamic lighting and surface detail adjustment.",
+        description: "Three.js previewer with Parallax Occlusion Mapping for testing materials under dynamic lighting before export.",
         images: ["/projects/texgen ai/Screenshot 2026-04-26 193506.png"]
       }
     ],
     tools: ["React", "Python", "Three.js", "FastAPI"],
     year: "2026",
-    role: "Lead Developer",
+    role: "Developer",
     persona: "AI"
   },
 ];
