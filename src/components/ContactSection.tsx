@@ -2,11 +2,12 @@ import { motion, AnimatePresence } from "motion/react";
 import { Mail, Linkedin, Github, Twitter, ExternalLink, Send, CheckCircle2, AlertCircle } from "lucide-react";
 import { SOCIAL_LINKS } from "../data";
 import { useState } from "react";
+import type { FormEvent } from "react";
 
 export default function ContactSection() {
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus('sending');
 
@@ -46,11 +47,11 @@ export default function ContactSection() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 items-center">
             <div>
               <h2 className="text-zinc-500 font-mono text-xs md:text-sm uppercase tracking-[0.3em] mb-4">Get in Touch</h2>
-              <h3 className="text-4xl md:text-7xl font-display font-black leading-none mb-8 uppercase">
-                READY TO <br /><span className="text-brand">COLLABORATE?</span>
+              <h3 className="text-3xl md:text-7xl font-display font-black leading-none mb-6 md:mb-8 uppercase">
+                LET'S <br /><span className="text-brand">CONNECT.</span>
               </h3>
-              <p className="text-zinc-400 text-base md:text-lg leading-relaxed max-w-md mb-12">
-                Currently looking for new opportunities in AI engineering, game development, and technical art. Let's build something legendary together.
+              <p className="text-zinc-400 text-sm md:text-lg leading-relaxed max-w-md mb-8 md:mb-12">
+                Open to freelance work, internships, and collaboration opportunities in game development, AI automation, and full-stack web projects.
               </p>
               
               <div className="flex flex-col gap-6">
