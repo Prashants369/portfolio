@@ -22,8 +22,8 @@ export default function Navbar() {
       className="fixed top-0 left-0 right-0 z-50 flex justify-center p-3 md:p-6"
     >
       <nav className="glass rounded-full px-4 md:px-6 py-2 md:py-3 flex items-center gap-2 md:gap-8 shadow-2xl max-w-[96vw]">
-        <Link to="/" className="font-display font-bold text-base md:text-xl tracking-tighter border-r border-glass-border pr-3 md:pr-8 uppercase group flex items-center gap-2 shrink-0">
-          <span className="whitespace-nowrap">PS<span className="text-brand group-hover:animate-pulse hidden sm:inline">.</span><span className="hidden sm:inline"> Sagathiya</span></span>
+        <Link to="/" className="font-display font-bold text-base md:text-xl tracking-tighter border-r border-glass-border pr-3 md:pr-8 group flex items-center gap-2 shrink-0">
+          <span className="whitespace-nowrap lowercase">prashant<span className="text-brand group-hover:animate-pulse">.</span>s</span>
         </Link>
         
         {/* Desktop Nav */}

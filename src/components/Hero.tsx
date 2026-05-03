@@ -13,7 +13,7 @@ export default function Hero() {
         <div className="max-w-7xl w-full space-y-8">
           {/* Intro text */}
           <div className="text-center space-y-4 mb-4">
-            <p className="text-[10px] md:text-xs font-mono text-zinc-500 uppercase tracking-[0.3em]">Prashant Sagathiya // Portfolio</p>
+            <p className="text-[10px] md:text-xs font-mono text-zinc-500 uppercase tracking-[0.3em]">prashant.s // Portfolio</p>
             <h1 className="text-4xl md:text-7xl font-display font-black uppercase tracking-tighter leading-none">
               Choose Your <span className="text-brand">Path</span>
             </h1>
@@ -96,7 +96,7 @@ export default function Hero() {
               <span className="relative inline-flex rounded-full h-2 w-2 bg-brand"></span>
             </span>
             <span className="text-[9px] md:text-[10px] font-mono uppercase tracking-[0.2em] text-zinc-300">
-              Prashant Sagathiya // {persona === '3D' ? 'Environment Design' : 'AI Engineering'}
+              prashant.s // {persona === '3D' ? 'Environment Design' : 'AI Engineering'}
             </span>
           </div>
           

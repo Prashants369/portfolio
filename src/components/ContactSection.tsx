@@ -163,7 +163,7 @@ export default function ContactSection() {
         </div>
         
         <div className="mt-20 md:mt-32 flex flex-col md:flex-row justify-between items-center gap-8 border-t border-white/5 pt-12 text-zinc-600 text-[10px] md:text-xs font-mono uppercase tracking-widest text-center md:text-left">
-          <p>© {new Date().getFullYear()} Prashant Sagathiya. Portfolio // v2.0</p>
+          <p>© {new Date().getFullYear()} prashant.s. Portfolio // v2.0</p>
           <div className="flex gap-8">
             <a href={SOCIAL_LINKS.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-brand transition-colors">LinkedIn</a>
             <a href={SOCIAL_LINKS.github} target="_blank" rel="noopener noreferrer" className="hover:text-brand transition-colors">GitHub</a>

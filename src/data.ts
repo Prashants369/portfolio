@@ -8,7 +8,7 @@ import { Project, Experience, Skill } from "./types";
 // 4. Update 'tools' and 'longDescription' with your project details.
 
 export const SOCIAL_LINKS = {
-  linkedin: "https://www.linkedin.com/in/prashant-sagathiya-a67b54203/",
+  linkedin: "https://www.linkedin.com/in/prashant-sagathiya-19bb59323",
   github: "https://github.com/prashantsagathiya",
   twitter: "#",
   email: "prashantsagathiya818@gmail.com"
