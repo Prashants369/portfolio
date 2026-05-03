@@ -21,8 +21,8 @@ export default function Navbar() {
       animate={{ y: 0 }}
       className="fixed top-0 left-0 right-0 z-50 flex justify-center p-3 md:p-6"
     >
-      <nav className="glass rounded-full px-4 md:px-6 py-2 md:py-3 flex items-center gap-2 md:gap-8 shadow-2xl max-w-[96vw]">
-        <Link to="/" className="font-display font-bold text-base md:text-xl tracking-tighter border-r border-glass-border pr-3 md:pr-8 group flex items-center gap-2 shrink-0">
+      <nav className="bg-black/60 backdrop-blur-2xl rounded-full px-4 md:px-7 py-2 md:py-3.5 flex items-center gap-2 md:gap-8 border border-white/10 shadow-2xl max-w-[96vw]">
+        <Link to="/" className="font-display font-black text-lg md:text-2xl tracking-tighter border-r border-white/10 pr-4 md:pr-10 group flex items-center gap-2 shrink-0">
           <span className="whitespace-nowrap lowercase">prashant<span className="text-brand group-hover:animate-pulse">.</span>s</span>
         </Link>
         
@@ -55,10 +55,10 @@ export default function Navbar() {
         </div>
 
         {/* Persona Switcher — visible on all sizes */}
-        <div className="flex items-center border-l border-glass-border pl-2 md:pl-6 gap-1 shrink-0">
+        <div className="flex items-center border-l border-white/10 pl-2 md:pl-8 gap-2 shrink-0">
           <button
             onClick={() => setPersona('3D')}
-            className={`p-1.5 md:p-2 rounded-full transition-all ${persona === '3D' ? 'bg-3d-brand text-white shadow-[0_0_15px_rgba(242,125,38,0.4)]' : 'text-zinc-500 hover:text-3d-brand'}`}
+            className={`p-1.5 md:p-2.5 rounded-full transition-all ${persona === '3D' ? 'bg-brand text-white shadow-[0_0_20px_rgba(255,75,75,0.4)]' : 'text-zinc-500 hover:text-white'}`}
             title="3D / Game Design"
           >
             <Sparkles size={14} />

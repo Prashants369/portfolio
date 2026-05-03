@@ -15,7 +15,7 @@ export const PersonaProvider: React.FC<{ children: React.ReactNode }> = ({ child
   // Default to BOTH or check localStorage
   const [persona, setPersonaState] = useState<Persona>(() => {
     const saved = localStorage.getItem('portfolio-persona');
-    return (saved as Persona) || 'BOTH';
+    return (saved as Persona) || '3D';
   });
 
   const setPersona = (p: Persona) => {
@@ -24,12 +24,14 @@ export const PersonaProvider: React.FC<{ children: React.ReactNode }> = ({ child
   };
 
   const themeColor = persona === '3D' ? '#ff4d4d' : persona === 'AI' ? '#00f2ff' : '#ffffff';
+  const themeRGB = persona === '3D' ? '255, 77, 77' : persona === 'AI' ? '0, 242, 255' : '255, 255, 255';
   const is3D = persona === '3D' || persona === 'BOTH';
   const isAI = persona === 'AI' || persona === 'BOTH';
 
   // Apply theme to document body or a CSS variable
   useEffect(() => {
     document.documentElement.style.setProperty('--brand-color', themeColor);
+    document.documentElement.style.setProperty('--brand-rgb', themeRGB);
     if (persona === '3D') {
       document.body.classList.add('theme-3d');
       document.body.classList.remove('theme-ai');
