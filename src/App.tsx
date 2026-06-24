@@ -6,6 +6,7 @@ import PortfolioPage from "./pages/PortfolioPage";
 import ResumePage from "./pages/ResumePage";
 import ScrollToTop from "./components/ScrollToTop";
 import { motion, useScroll, useSpring } from "motion/react";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 import { PersonaProvider } from "./context/PersonaContext";
 
@@ -44,6 +45,7 @@ export default function App() {
                style={{ backgroundImage: `url('https://grainy-gradients.vercel.app/noise.svg')` }} />
         </div>
       </BrowserRouter>
+      <SpeedInsights />
     </PersonaProvider>
   );
 }
