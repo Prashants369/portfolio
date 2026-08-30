@@ -1,5 +1,11 @@
 import { Project, Experience, Skill } from "./types";
 
+const navamShot = (n: number) =>
+  `/projects/navam disha envirnment/HighresScreenshot${String(n).padStart(5, "0")}.png`;
+
+const navamRange = (from: number, to: number) =>
+  Array.from({ length: to - from + 1 }, (_, i) => navamShot(from + i));
+
 export const SOCIAL_LINKS = {
   linkedin: "https://www.linkedin.com/in/prashant-sagathiya-19bb59323",
   github: "https://github.com/Prashants369",
@@ -14,16 +20,16 @@ export const projects: Project[] = [
     title: "Silent Echo: Operation Rainforest",
     category: "Game Design & Technical Art",
     thumbnail: "/projects/druglordsbase/final-renders/HighresScreenshot00000.png",
-    description: "Tactical stealth mission and rainforest environment in Unreal Engine 5 — from greybox and GDD through PCG foliage, modular camps, and cinematic lighting.",
-    longDescription: "Silent Echo is a combined environment-art and game-design project set in a remote North-East Indian rainforest. The environment side covers a full technical-art pipeline: mood studies, greyboxing, PCG ecosystems, modular cartel-camp kits, Lumen lighting, and an optimization pass for mid-range hardware. The design side documents a 5-act stealth rescue — insertion, jungle exploration, swamp tension, camp infiltration, and an unresolved ending — with companion dynamics between Capt. Arjun Mehta and Sgt. Alex Carter.",
+    description: "A stealth rescue in a North-East Indian rainforest — environment built in UE5, mission written as a full GDD.",
+    longDescription: "I built this as two things at once: a jungle you can walk, and a mission you can play on paper. The world is a restricted rainforest (I kept bouncing between Assam/Meghalaya and the Western Ghats) with fog, huge trees, old temple ruins, and a cartel camp hidden inside it. The art side is greybox → PCG foliage → modular shacks → Lumen. The design side is a five-act rescue where two soldiers who don't trust each other have to find missing villagers before the jungle swallows the trail.",
     tools: ["Unreal Engine 5", "PCG Framework", "Lumen", "C++", "Motion Matching"],
     year: "2025",
     role: "Environment Artist & Game Designer",
     persona: "3D",
     highlights: [
-      "End-to-end rainforest: greybox → PCG foliage → modular kits → Lumen lighting → cinematic renders",
-      "5-act stealth GDD with AI detection, companion friction, and environmental storytelling",
-      "LOD, instancing, and modular architecture pass aimed at stable performance on mid-range hardware"
+      "Full jungle pipeline in UE5: greybox, PCG, modular camp kits, Lumen, then an optimization pass",
+      "Wrote the mission myself — five acts, two soldiers, stealth that can break into a loud fight",
+      "Every folder of stills is on the Environment page: finals, mids, extra buildings, opts, greybox"
     ],
     variants: [
       {
@@ -31,66 +37,108 @@ export const projects: Project[] = [
         label: "Environment Art",
         title: "Silent Echo: Technical Environment",
         category: "Technical Environment Art",
-        description: "High-fidelity rainforest built in UE5 with PCG ecosystems, modular camp kits, and Lumen GI.",
-        longDescription: "A complete technical-art workflow for a dense rainforest. Work started from mood studies and reference boards, moved through greybox and mid-renders, then into PCG foliage distribution, modular building kits for the cartel camp, Lumen lighting, and a final optimization pass covering LODs and geometry density.",
+        description: "Rainforest camp in UE5. Every still from the folders is here — finals, mids, extra buildings, opts, greybox.",
+        longDescription: "I treated the jungle like a production, not a screenshot hunt. First greybox the cliff, maze, and camp so paths made sense. Then PCG for the plants so it didn't look stamped. Then the wooden shacks and walkways as a small modular kit. Lumen + fog last, because lighting lies if the layout is still wrong. The folders on disk are the same folders on this page.",
         highlights: [
-          "PCG graphs for organic foliage and micro-debris across the landscape",
-          "Modular camp architecture with instanced meshes and PBR materials",
-          "Lumen GI with canopy light scattering, fog volumes, and cinematic camera work"
+          "Greybox first so the maze, cliff drop, and camp actually play",
+          "PCG foliage with density noise — I was tired of copy-paste bushes",
+          "Modular camp pieces (watchtower, shacks, walkways) reused across the compound"
         ],
         gallery: [
           "/projects/druglordsbase/final-renders/HighresScreenshot00000.png",
+          "/projects/druglordsbase/final-renders/HighresScreenshot00000 (2).png",
           "/projects/druglordsbase/final-renders/HighresScreenshot00001 (2).png",
           "/projects/druglordsbase/final-renders/HighresScreenshot00002.png",
+          "/projects/druglordsbase/final-renders/HighresScreenshot00002 (2).png",
           "/projects/druglordsbase/final-renders/HighresScreenshot00003 (2).png",
           "/projects/druglordsbase/final-renders/HighresScreenshot00004.png",
+          "/projects/druglordsbase/final-renders/HighresScreenshot00004 (2).png",
           "/projects/druglordsbase/final-renders/HighresScreenshot00005.png",
-          "/projects/druglordsbase/mid-renders/ScreenShot00000 (2).png",
-          "/projects/druglordsbase/mid-renders/ScreenShot00001 (2).png",
+          "/projects/druglordsbase/final-renders/HighresScreenshot00005 (2).png",
           "/projects/druglordsbase/final-renders/HighresScreenshot00006.png",
           "/projects/druglordsbase/final-renders/HighresScreenshot00007.png",
-          "/projects/druglordsbase/optimizations/HighresScreenshot00001.png",
-          "/projects/druglordsbase/optimizations/HighresScreenshot00003.png",
+          "/projects/druglordsbase/mid-renders/HighresScreenshot00008.png",
+          "/projects/druglordsbase/mid-renders/HighresScreenshot00009.png",
+          "/projects/druglordsbase/mid-renders/ScreenShot00000 (2).png",
+          "/projects/druglordsbase/mid-renders/ScreenShot00001 (2).png",
+          "/projects/druglordsbase/mid-renders/ScreenShot00007.png",
           "/projects/druglordsbase/extra-buildings/HighresScreenshot00006.png",
           "/projects/druglordsbase/extra-buildings/HighresScreenshot00007.png",
           "/projects/druglordsbase/extra-buildings/HighresScreenshot00008.png",
           "/projects/druglordsbase/extra-buildings/HighresScreenshot00009.png",
-          "/projects/druglordsbase/extra-buildings/HighresScreenshot00010.png"
+          "/projects/druglordsbase/extra-buildings/HighresScreenshot00010.png",
+          "/projects/druglordsbase/optimizations/HighresScreenshot00001.png",
+          "/projects/druglordsbase/optimizations/HighresScreenshot00003.png",
+          "/projects/druglordsbase/greyboxing/ScreenShot00000.png",
+          "/projects/druglordsbase/greyboxing/ScreenShot00001.png",
+          "/projects/druglordsbase/greyboxing/ScreenShot00002.png",
+          "/projects/druglordsbase/greyboxing/ScreenShot00002 (2).png",
+          "/projects/druglordsbase/greyboxing/ScreenShot00003.png",
+          "/projects/druglordsbase/greyboxing/ScreenShot00004.png",
+          "/projects/druglordsbase/greyboxing/ScreenShot00005.png",
+          "/projects/druglordsbase/greyboxing/ScreenShot00006.png"
         ],
         sections: [
           {
-            title: "01. Environment Renders",
-            description: "Cinematic stills using Lumen global illumination. Focus on light scattering through dense canopy, atmospheric depth, and readable tactical space inside the jungle.",
+            title: "01. Final Renders",
+            description: "These are the hero shots. Lumen through the canopy, fog in the valleys, the camp sitting in the trees instead of on a flat pad. I kept taking extras from slightly different angles (the files with (2) in the name) because one camera never sold the space.",
             images: [
               "/projects/druglordsbase/final-renders/HighresScreenshot00000.png",
+              "/projects/druglordsbase/final-renders/HighresScreenshot00000 (2).png",
               "/projects/druglordsbase/final-renders/HighresScreenshot00001 (2).png",
               "/projects/druglordsbase/final-renders/HighresScreenshot00002.png",
+              "/projects/druglordsbase/final-renders/HighresScreenshot00002 (2).png",
               "/projects/druglordsbase/final-renders/HighresScreenshot00003 (2).png",
               "/projects/druglordsbase/final-renders/HighresScreenshot00004.png",
-              "/projects/druglordsbase/final-renders/HighresScreenshot00005.png"
-            ]
-          },
-          {
-            title: "02. Technical Art & PCG Systems",
-            description: "Procedural Content Generation graphs distribute foliage and micro-debris with density noise so the jungle reads as organic rather than stamped. Mid-renders document graph iteration before the final lighting pass.",
-            images: [
-              "/projects/druglordsbase/mid-renders/ScreenShot00000 (2).png",
-              "/projects/druglordsbase/mid-renders/ScreenShot00001 (2).png",
+              "/projects/druglordsbase/final-renders/HighresScreenshot00004 (2).png",
+              "/projects/druglordsbase/final-renders/HighresScreenshot00005.png",
+              "/projects/druglordsbase/final-renders/HighresScreenshot00005 (2).png",
               "/projects/druglordsbase/final-renders/HighresScreenshot00006.png",
               "/projects/druglordsbase/final-renders/HighresScreenshot00007.png"
             ]
           },
           {
-            title: "03. Optimization & Modular Kits",
-            description: "Geometry density, LOD transitions, and modular building kits for the cartel camp. Instanced meshes and shared PBR materials keep draw calls down while the silhouette of watchtowers, shacks, and walkways stays readable from infiltration sightlines.",
+            title: "02. Mid Renders",
+            description: "In-between pass. Foliage is in, lighting isn't finished, some meshes still look raw. I kept these because the jump from greybox to final looks fake if you hide the messy middle.",
             images: [
-              "/projects/druglordsbase/optimizations/HighresScreenshot00001.png",
-              "/projects/druglordsbase/optimizations/HighresScreenshot00003.png",
+              "/projects/druglordsbase/mid-renders/HighresScreenshot00008.png",
+              "/projects/druglordsbase/mid-renders/HighresScreenshot00009.png",
+              "/projects/druglordsbase/mid-renders/ScreenShot00000 (2).png",
+              "/projects/druglordsbase/mid-renders/ScreenShot00001 (2).png",
+              "/projects/druglordsbase/mid-renders/ScreenShot00007.png"
+            ]
+          },
+          {
+            title: "03. Extra Buildings",
+            description: "The camp kit — watchtower, shacks, walkways. Same pieces, different clusters, so the compound feels built by people who dumped lumber in a jungle, not by a unique-mesh artist.",
+            images: [
               "/projects/druglordsbase/extra-buildings/HighresScreenshot00006.png",
               "/projects/druglordsbase/extra-buildings/HighresScreenshot00007.png",
               "/projects/druglordsbase/extra-buildings/HighresScreenshot00008.png",
               "/projects/druglordsbase/extra-buildings/HighresScreenshot00009.png",
               "/projects/druglordsbase/extra-buildings/HighresScreenshot00010.png"
+            ]
+          },
+          {
+            title: "04. Optimizations",
+            description: "LOD and density checks. Nanite helps, but the foliage still needed rules or the frame rate died the second you looked into the trees. This pass was 'does it still look like a jungle on mid-range hardware'.",
+            images: [
+              "/projects/druglordsbase/optimizations/HighresScreenshot00001.png",
+              "/projects/druglordsbase/optimizations/HighresScreenshot00003.png"
+            ]
+          },
+          {
+            title: "05. Greyboxing",
+            description: "Blockout of the cliff spawn, jungle maze, stream, and camp footprint. I locked paths here before dressing anything. If the greybox is boring, plants won't save it.",
+            images: [
+              "/projects/druglordsbase/greyboxing/ScreenShot00000.png",
+              "/projects/druglordsbase/greyboxing/ScreenShot00001.png",
+              "/projects/druglordsbase/greyboxing/ScreenShot00002.png",
+              "/projects/druglordsbase/greyboxing/ScreenShot00002 (2).png",
+              "/projects/druglordsbase/greyboxing/ScreenShot00003.png",
+              "/projects/druglordsbase/greyboxing/ScreenShot00004.png",
+              "/projects/druglordsbase/greyboxing/ScreenShot00005.png",
+              "/projects/druglordsbase/greyboxing/ScreenShot00006.png"
             ]
           }
         ],
@@ -101,12 +149,12 @@ export const projects: Project[] = [
         label: "Game Design Document",
         title: "Silent Echo: Design Documentation",
         category: "Game Design & Level Documentation",
-        description: "Level design GDD for a rainforest rescue: 5-act flow, companion dynamics, stealth AI, and environmental storytelling.",
-        longDescription: "The GDD documents Rainforest Rescue, where Captain Arjun Mehta (Indian Army Special Forces) and Sgt. Alex Carter (US special operations) infiltrate a remote jungle cartel after tribal villagers disappear. It covers a linear-branching 5-act structure — helicopter cliff drop, jungle maze, swamp, camp infiltration, unresolved fog ending — plus stealth-vs-combat pacing, AI vision/hearing cones, and environmental clues (blood trails, broken tools, tribal markings) that turn recon into a personal rescue.",
+        description: "My notes for a rainforest rescue — two soldiers, a missing village, and a camp you can ghost or burn.",
+        longDescription: "I didn't want a generic jungle shooter. The setting is a restricted Indian rainforest — I kept going back and forth between Assam/Meghalaya and the Western Ghats — fog, old trees, temple ruins, wildlife you hear more than you see. Tribal people start vanishing. Rumour is a cartel set up a lab in the middle of nowhere and is using villagers as labour. India asks a US covert unit for help, which is how you end up with an Indian captain and an American sergeant who don't like each other yet.\n\nThe mission is called Rainforest Rescue on paper. You drop on a cliff, get lost in the maze, find the camp in a swamp, and the ending is unfinished on purpose — villagers out, cartel boss gone, both men walking into fog.",
         highlights: [
-          "5-act linear-branching mission: insertion → exploration → swamp → infiltration → unresolved ending",
-          "Companion friction between Arjun Mehta and Alex Carter as a narrative system",
-          "Stealth-first AI: vision/hearing cones, patrol trees, melee takedowns, limited silenced firearms"
+          "Five acts: cliff drop, jungle search, swamp reveal, infiltration, unfinished ending",
+          "Arjun Mehta and Alex Carter — trust issues first, respect later",
+          "Stealth is the default. Going loud is a choice, not the loop"
         ],
         gallery: [
           "/projects/druglordsbase/greyboxing/ScreenShot00000.png",
@@ -118,48 +166,52 @@ export const projects: Project[] = [
           "/projects/druglordsbase/greyboxing/ScreenShot00005.png",
           "/projects/druglordsbase/greyboxing/ScreenShot00006.png",
           "/projects/druglordsbase/references/35387a9f-2ad2-47c6-8db8-2197d71f7082.png",
-          "/projects/druglordsbase/references/81826ff4-8eb3-49d9-89d2-6db33208e178.png"
+          "/projects/druglordsbase/references/81826ff4-8eb3-49d9-89d2-6db33208e178.png",
+          "/projects/druglordsbase/references/ba469b5b-65d9-4c04-9b8a-9e67bc539d94.png",
+          "/projects/druglordsbase/references/Rustic Jungle Watchtower at Night.png"
         ],
         sections: [
           {
-            title: "01. Tactical Infiltration & Level Flow",
-            description: "The mission is a linear-branching hybrid across five acts. Act 1 (The Arrival) opens on a cliff-side helicopter drop and a cinematic overlook of the valley. Acts 2–3 send the player through a jungle maze where thick vegetation, fallen-tree crawls, and climbable ledges control pace and exposure. Acts 4–5 cover camp infiltration and an emotional, unfinished resolution in fog.\n\nPacing is built around tension spikes: long stealth stretches that break into short combat bursts so the player never settles into one mode.",
+            title: "01. Story & Level Flow",
+            description: "Act 1 — Arrival. Helicopter dumps you on a cliff. First view is the whole valley under fog. Brief is simple: find the missing people, scout, don't start a war. Opening cinematic is just Arjun and Alex talking past each other — culture, tactics, ego.\n\nAct 2 — Search. Jungle maze. Three ways through: thick plants (slow, hidden), a fallen-tree crawl, or a rock ledge that leaves you open. Water, wildlife, abandoned camps. Clues are small on purpose — blood, a broken tool, a tribal mark — so you piece it together instead of getting a cutscene.\n\nAct 3 — The camp. Swamp, worse animals, then you see the compound. Villagers in cages, a lab. Arjun recognises an elder. That's when it stops being recon.\n\nAct 4 — In. Zipline or the big fallen-tree bridge. Silent takedowns if you're patient. Or you trip something and the whole camp wakes up — that's the dopamine hit I wanted, not a scripted set-piece.\n\nAct 5 — Unfinished. People get out. The leader runs deeper into the trees. Alex and Arjun walk into fog. Sequel bait, but also the honest ending: you didn't actually win.",
             images: [
               "/projects/druglordsbase/greyboxing/ScreenShot00000.png",
               "/projects/druglordsbase/greyboxing/ScreenShot00001.png",
-              "/projects/druglordsbase/greyboxing/ScreenShot00002.png"
+              "/projects/druglordsbase/greyboxing/ScreenShot00002.png",
+              "/projects/druglordsbase/greyboxing/ScreenShot00002 (2).png"
             ]
           },
           {
-            title: "02. Characters & Narrative Stakeholders",
-            description: "Two archetypes share the mission: Captain Arjun Mehta, a stoic Indian Army jungle-warfare specialist grounded in local culture, and Sgt. Alex Carter, a US operative used to South American jungle work and initially skeptical of the land and the partnership.\n\nStakes personalize through the environment. Blood trails, abandoned camps, and tribal markings shift the brief from recon to rescue. Arjun recognizing a missing elder among the captives is the beat that makes the cartel camp more than a tactical objective.",
+            title: "02. Arjun & Alex",
+            description: "Captain Arjun Mehta is Indian Army Special Forces. Jungle guy. Quiet. He cares about the tribes more than the geopolitics. Sgt. Alex Carter is US special ops, used to South American jungles, treats this like another deployment until he doesn't.\n\nI wanted them to clash first — how to move, who to trust, whether the ruins even matter — and then earn the partnership. The beat that does it: Arjun seeing someone he knows in a cage. After that Alex has to take the land seriously or the player feels it.",
             images: [
               "/projects/druglordsbase/references/35387a9f-2ad2-47c6-8db8-2197d71f7082.png",
               "/projects/druglordsbase/greyboxing/ScreenShot00003.png"
             ]
           },
           {
-            title: "03. Mechanics & AI Behavior Systems",
-            description: "Stealth-first: enemies use vision and hearing cones, so foliage, prone crawls, and context-sensitive traversal matter. Combat is limited-ammo with silenced weapons; melee takedowns are the intended infiltration tool.\n\nIn Unreal, patrol and alert states live in Behavior Trees. Niagara handles water streams and wetness decals so the rainforest is both atmosphere and cover.",
+            title: "03. How it plays",
+            description: "Stealth first. Guards have vision and hearing, so bushes and prone crawls aren't flavour, they're the kit. Limited ammo, silenced guns if you have to. Melee takedowns are how you're supposed to clear the camp.\n\nOptional ruins off the main path — Indian temple stuff, not a collectible checklist. Core path is linear; the maze and the two camp approaches are the branches. I wrote it as stealth → tension → a sudden fight if you blow it, then back down. If every encounter is a firefight the jungle stops being scary.",
             images: [
               "/projects/druglordsbase/greyboxing/ScreenShot00005.png",
               "/projects/druglordsbase/greyboxing/ScreenShot00004.png"
             ]
           },
           {
-            title: "04. Technical Implementation & Tasks",
-            description: "Pipeline: prototype blockout for terrain and maze paths → PCG density setup → GASP / motion matching for traversal, idle, and combat → foliage packs and custom shaders → Niagara water and fog volumes → cinematic camera triggers, audio volumes, and a lighting pass that keeps the jungle dark without killing tactical readability.",
+            title: "04. What I'd build in Unreal",
+            description: "Landscape for the cliffs and valleys. PCG for the plants so density can be noisy instead of stamped. Fog volumes and sunshafts through the canopy. Niagara for the streams. Audio volumes for animals you rarely see. Modular kits for ruins and the camp, moss decals on everything.\n\nCharacters: GASP / motion matching so traversal doesn't pop. Behaviour trees for patrol and alert. Simple subtitle widgets for the talky bits. Arjun as companion AI — he follows, he talks, he helps if you go loud. Build order I actually use: blockout → foliage → PCG → soldiers → AI → stealth/guns → triggers → lighting and sound last.",
             images: [
               "/projects/druglordsbase/optimizations/HighresScreenshot00001.png",
               "/projects/druglordsbase/greyboxing/ScreenShot00006.png"
             ]
           },
           {
-            title: "05. Cinematic & Environmental Storytelling",
-            description: "Camera triggers hit overlooks and key discoveries. Story is told with blood stains, broken cages, and ancient symbols rather than long cutscenes. References: Green Hell for jungle density, Far Cry 3 for camp infiltration, Spec Ops: The Line for moral weight between soldiers, and overgrown Indian ruins for local myth layered onto a modern tactical brief.",
+            title: "05. Mood & references",
+            description: "Green Hell for how thick a jungle should feel. Far Cry 3 for camps and that cartel smell. Spec Ops: The Line for two soldiers going wrong together. And actual Indian ruins — moss, carvings, respect — so it doesn't look like a South American map with a rename.\n\nStory in the dirt: blood, cages, marks on trees. Camera triggers on the overlook and when you first see the camp. I don't want a ten-minute cutscene if a broken tool on the path does the job.\n\nLater, if I continue it: co-op for both soldiers, real wildlife AI, dialogue that actually moves the trust meter.",
             images: [
               "/projects/druglordsbase/references/ba469b5b-65d9-4c04-9b8a-9e67bc539d94.png",
-              "/projects/druglordsbase/references/81826ff4-8eb3-49d9-89d2-6db33208e178.png"
+              "/projects/druglordsbase/references/81826ff4-8eb3-49d9-89d2-6db33208e178.png",
+              "/projects/druglordsbase/references/Rustic Jungle Watchtower at Night.png"
             ]
           }
         ],
@@ -211,16 +263,16 @@ export const projects: Project[] = [
     title: "Navam Disha: The 9th Direction",
     category: "World Building & Game Design",
     thumbnail: "/projects/navam disha envirnment/HighresScreenshot00027.png",
-    description: "15th-century Indian world: modular desert palace in UE5 plus a GDD for the 9th Direction — a hidden layer of reality reached through a ritual compass.",
-    longDescription: "Navam Disha pairs a modular desert-palace environment in Unreal Engine 5 with original world-building. The GDD describes a 9-spoked compass that points to where a parallel layer of reality is thinnest. Players — Aarav and Veer — tune the device with ritual gestures and celestial timing, then move through echo quests, chrono-puzzles, and village NPCs whose crafts and lore are the skill tree. Terrain is authored in Gaea and lit with Lumen across long exterior vistas.",
+    description: "A 15th-century Indian palace in UE5, and a game about a compass that points somewhere maps don't have.",
+    longDescription: "The environment is a desert palace I blocked out, kitbashed, and lit in Unreal — Gaea for the land, Lumen for the heat. The design doc is the other half: two village boys find a 9-spoked compass that doesn't point north. It points at the 9th direction — Navam Disha — a fold over the real world. I took that from the old idea that after the eight compass points there's an inward / hidden one. The palace shots are the world. The GDD is what happens when you walk into it.",
     tools: ["Unreal Engine 5", "Lumen", "Blueprints", "Gaea", "Modeling Tools"],
     year: "2025",
     role: "Environment Artist & Game Designer",
     persona: "3D",
     highlights: [
-      "Modular desert palace in UE5 with Lumen lighting and Gaea terrain",
-      "Original 9th Direction system: compass tuning, chrono-puzzles, parallel layers",
-      "Village plot-families as mentors — farming, craft, spirit, and martial progression"
+      "All 35 environment stills on the Environment page — blockout through final light",
+      "Compass of the 9 Directions: not north, the thin spot in reality",
+      "Village families teach you. The 9th layer tries to keep you"
     ],
     variants: [
       {
@@ -228,48 +280,34 @@ export const projects: Project[] = [
         label: "Technical Environment",
         title: "Navam Disha: Environment Art",
         category: "Technical Environment Art",
-        description: "Desert palace built from modular kits, Gaea terrain, and Lumen lighting for long exterior shots.",
-        longDescription: "A desert palace environment using modular building kits in Unreal Engine 5. Focus on architectural silhouette against Gaea-generated terrain, Lumen-based lighting with volumetric atmosphere, and LOD work so expansive vistas stay usable.",
+        description: "Desert palace in UE5. Every screenshot from the folder is here — massing, lighting, courtyards, final vistas.",
+        longDescription: "I wanted a palace you could read from a kilometre away. Modular walls and domes on a Gaea landscape, then Lumen so dusk actually felt hot. Some shots still have the volume debug lines — I left them. That's the work, not just the postcard.",
         highlights: [
-          "Modular palace kit with readable silhouette at vista scale",
-          "Gaea erosion / heightmaps integrated into UE5 landscapes",
-          "Lumen and volumetric fog for heat, dusk, and interior-exterior contrast"
+          "Massing first so the silhouette works against the mountains",
+          "Gaea terrain, then the kit dropped onto cliffs and courtyards",
+          "Lighting pass last — heat, dusk, interior spill"
         ],
-        gallery: [
-          "/projects/navam disha envirnment/HighresScreenshot00027.png",
-          "/projects/navam disha envirnment/HighresScreenshot00028.png",
-          "/projects/navam disha envirnment/HighresScreenshot00030.png",
-          "/projects/navam disha envirnment/HighresScreenshot00031.png",
-          "/projects/navam disha envirnment/HighresScreenshot00033.png",
-          "/projects/navam disha envirnment/HighresScreenshot00034.png",
-          "/projects/navam disha envirnment/HighresScreenshot00000.png",
-          "/projects/navam disha envirnment/HighresScreenshot00015.png",
-          "/projects/navam disha envirnment/HighresScreenshot00022.png",
-          "/projects/navam disha envirnment/HighresScreenshot00024.png",
-          "/projects/navam disha envirnment/HighresScreenshot00026.png",
-          "/projects/navam disha envirnment/HighresScreenshot00023.png",
-          "/projects/navam disha envirnment/HighresScreenshot00008.png"
-        ],
+        gallery: navamRange(0, 34),
         sections: [
           {
-            title: "01. Architectural Vistas",
-            description: "Modular palace structures set into Gaea terrain. Scale, silhouette, and approach paths are designed so the building reads as a destination from the desert floor.",
-            images: [
-              "/projects/navam disha envirnment/HighresScreenshot00027.png",
-              "/projects/navam disha envirnment/HighresScreenshot00028.png",
-              "/projects/navam disha envirnment/HighresScreenshot00030.png",
-              "/projects/navam disha envirnment/HighresScreenshot00031.png"
-            ]
+            title: "01. Blockout & Massing",
+            description: "Big shapes first. Palace on the cliff, walls running the ridge, mountains behind. If this read as a toy from the air I wasn't going to dress it.",
+            images: navamRange(7, 14)
           },
           {
-            title: "02. Atmospheric Lighting",
-            description: "Lumen and volumetric effects for heat haze, dusk, and interior spill. Lighting is used to sell both the grounded village world and the slightly-wrong 9th Direction overlay.",
-            images: [
-              "/projects/navam disha envirnment/HighresScreenshot00033.png",
-              "/projects/navam disha envirnment/HighresScreenshot00034.png",
-              "/projects/navam disha envirnment/HighresScreenshot00000.png",
-              "/projects/navam disha envirnment/HighresScreenshot00015.png"
-            ]
+            title: "02. Lighting Pass",
+            description: "Lumen, sun, a bit of fog. Rooftop shots, dusk, the debug volumes I was using to shape light. This is where it stopped looking like clay.",
+            images: [navamShot(0), navamShot(1), navamShot(15), navamShot(16), navamShot(33), navamShot(34)]
+          },
+          {
+            title: "03. Courtyards & Details",
+            description: "Walking the kit at human height — arches, walls, floors, the bits you actually bump into. Not the hero vista. The place.",
+            images: [...navamRange(2, 6), ...navamRange(17, 21)]
+          },
+          {
+            title: "04. Final Vistas",
+            description: "The shots I'd put on a reel. Scale, silhouette, sky. This is the palace as a destination, which is what the compass is supposed to drag you toward.",
+            images: navamRange(22, 32)
           }
         ],
         tools: ["Unreal Engine 5", "Lumen", "Gaea"]
@@ -279,89 +317,46 @@ export const projects: Project[] = [
         label: "Game Design Document",
         title: "Navam Disha: Design Documentation",
         category: "Game Design & Documentation",
-        description: "World bible for the 9th Direction: 5-act story, compass mechanics, plot families, and chrono-puzzles.",
-        longDescription: "The GDD defines Navam Disha as a fold in space-time overlaying 15th-century India. A 9-spoked compass points to where that layer is thinnest. Structure: Discovery (village mystery and the compass), Awakening (first overlay), Artifact Retrieval (nine lost tools of the Vishwakarma sages), Corruption (the layer leaking into the village), and Final Choice (seal, control, or balance). Mechanics include ritual tuning, echo quests, three-state chrono-puzzles, dream walking, and a disorientation meter that forces return to village life.",
+        description: "The 9th direction isn't on a map. Two boys, a broken water clock, and a compass that starts spinning on its own.",
+        longDescription: "I got stuck on this idea from Indian stuff I grew up around: four cardinals, four in-betweens, and then a 9th that isn't a direction at all — inward, upward, the unmanifest, avyakta. In the game it's a fold sitting on top of a 15th-century village. The compass (Navdisha Yantra) doesn't point north. It points at where that fold is thinnest right now, so the boys chase the needle into places that shouldn't exist.\n\nAarav lives with his grandmother. Veer has a huge family. They help an old astrologer fix a water clock and find the thing in his junk. First use: a jungle shrine nobody in the village remembers. After that the compass misbehaves, people dream wrong, and you have to decide if this is a gift or a leak.",
         highlights: [
-          "5-act structure from village discovery to a moral endgame",
-          "Compass as both key and seal — power with a cost",
-          "Plot families teach farming, craft, spirit, and combat as the skill system"
+          "Compass points at the thin spot, not north",
+          "Village life is the tutorial — farming, pots, mantras, not a skill menu",
+          "Stay in the 9th too long and your eyes start lying"
         ],
-        gallery: [
-          "/projects/navam disha envirnment/HighresScreenshot00008.png",
-          "/projects/navam disha envirnment/HighresScreenshot00009.png",
-          "/projects/navam disha envirnment/HighresScreenshot00010.png",
-          "/projects/navam disha envirnment/HighresScreenshot00011.png",
-          "/projects/navam disha envirnment/HighresScreenshot00012.png",
-          "/projects/navam disha envirnment/HighresScreenshot00013.png",
-          "/projects/navam disha envirnment/HighresScreenshot00014.png"
-        ],
+        gallery: navamRange(7, 14),
         sections: [
           {
-            title: "01. The 5-Act Structural Narrative",
-            description: "Act 1 — Discovery: Aarav and Veer help an astrologer repair a water clock and find the compass; a lost jungle shrine proves the 9th Direction is real. Act 2 — Awakening: the compass points at unstable places; villagers see past echoes. Act 3 — Artifact Retrieval: nine tools (Compass, Mirror of Reversal, Bell of Time, Seed of Dreaming, and others) open sunken cities, desert ruins, snow temples, and mirror palaces. Act 4 — Corruption: night skies change, NPCs vanish into the layer, geometry folds. Act 5 — Final Choice: seal the 9th forever, control it, or walk the harder balance path.",
-            images: [
-              "/projects/navam disha envirnment/HighresScreenshot00008.png",
-              "/projects/navam disha envirnment/HighresScreenshot00009.png"
-            ]
+            title: "01. What the 9th direction even is",
+            description: "It's not east of east. In the lore, sages used it and then sealed it because things in there eat time and memory. The compass is both a key and a lock. Use it too much and you open the floodgates.\n\nWhen it tunes, the world doesn't explode into a loading screen. It shimmers. Paths loop. A temple has rooms from three centuries at once. Someone's grandmother is standing in the courtyard but she's twenty. Geometry you couldn't see is suddenly a staircase. That's the 9th. I wanted the 'whoa' every time you use it, and then a price so you don't spam it.",
+            images: [navamShot(8), navamShot(9), navamShot(10)]
           },
           {
-            title: "02. Compass Mechanics & World Logic",
-            description: "The Compass of the 9 Directions is a yantra plus astrological mechanism. It does not point north — it points to where the overlay is thinnest. Players tune it with ritual gestures and celestial timing. Once attuned, the world shimmers: looping paths, rooms from different centuries, geometry only visible in the layer.\n\nStay too long and vision and sound lie (mental disorientation). The compass must be recharged through village rituals, so high-concept exploration always returns to grounded life.",
-            images: [
-              "/projects/navam disha envirnment/HighresScreenshot00013.png",
-              "/projects/navam disha envirnment/HighresScreenshot00012.png"
-            ]
+            title: "02. How the compass works",
+            description: "You don't just hold it and walk. Gestures, timing with the sky, sometimes a sound puzzle to tune in. Once you're in: echo quests (talk to shadows of people who already died), chrono-puzzles (do something in the past, present, and a third state of the same room), water that runs uphill, portals in the village if you can find them, and dream-walking if you do the ritual on a sleeper.\n\nStay too long and vision smears, you hear the wrong voices. That's the disorientation meter. You go home, do a village ritual, recharge the thing. I didn't want a magic flashlight. I wanted something you have to respect.\n\nLater it unlocks modes: Time Echo (see the past on top of now), Dreamwalker, Starlight (sky temples). And it's only 1 of 9 artifacts — Mirror of Reversal, Bell of Time, Seed of Dreaming, Lantern of True Sight, Key of Forgotten Paths, Blade of Unmaking, Book of the Silent Voice, Heart of the 9th Sky. Each one is a different kind of trouble.",
+            images: [navamShot(12), navamShot(13)]
           },
           {
-            title: "03. Plot Families & NPC Integration",
-            description: "NPCs are mentors, not bulletin boards. Ramdas and Bhola teach land, water, and stamina. Dinesh, Ramu, and Girdhar supply pots, tools, and stealth cloth. Pandit Harinarayan and Vaidya Raghuvansh teach mantras, herbs, and how to stabilize the layer. Captain Rudra Singh trains combat for Brotherhood fights; Arya opens castle infiltration. Village crafts are the skill tree.",
-            images: [
-              "/projects/navam disha envirnment/HighresScreenshot00011.png",
-              "/projects/navam disha envirnment/HighresScreenshot00014.png"
-            ]
+            title: "03. The village is the skill tree",
+            description: "I got bored of NPCs with yellow markers. Families have jobs, and the jobs teach you.\n\nFarming: Ramdas (old, rituals, moon), Bhola (water, stamina), Shivnath (cows, land). Craft: Dinesh the potter, Ramu the carpenter, Girdhar who weaves light clothes for stealth, Shyam who runs the cart. Spirit: Pandit Harinarayan for mantras and the sky, his daughter Kavya for rhythm puzzles, Vaidya Raghuvansh the healer who lives alone and knows how to calm the 9th. Combat: Captain Rudra Singh at the fort. Arya, the king's daughter, is how you get into the castle without being stupid.\n\nYou plough because Veer needs stamina. You make a pot because a puzzle needs one. The village isn't flavour. It's the upgrade path.",
+            images: [navamShot(11), navamShot(14)]
           },
           {
-            title: "04. Gameplay Loops & Chrono-Puzzles",
-            description: "Echo Quests: talk to shadows of past villagers to change the present. Chrono-puzzles: act in three time-states of one place to open a path. Physics zones bend gravity and send water upward. Dream walking lets players enter sleep and alter a fate — with ethical cost. Later compass modes add time-echo, dreamwalker, and starlight travel.",
-            images: [
-              "/projects/navam disha envirnment/HighresScreenshot00000.png"
-            ]
+            title: "04. Story, then it goes wrong",
+            description: "Act 1 is chores and weird dreams. Fix the water clock, find the compass, a shrine that isn't on anyone's map. Act 2 the needle starts twitching at broken places, villagers see people who died, you go into the overlay for real. Act 3 you're hunting the other eight artifacts — river city, desert where the stars are wrong, snow temple, a palace that's all mirrors. Act 4 the 9th leaks: night sky changes, people vanish and come back wrong, stairs that don't end. The old brotherhood that was supposed to guard this is serving whatever lives in there.\n\nEnd: seal it and lose the power, keep it and risk becoming them, or try to hold both — which I made the hard path on purpose. I don't want a clean win. Same as Silent Echo. If you understood the compass, the last beat should flip the rules one more time.",
+            images: [navamShot(0), navamShot(7)]
           },
           {
-            title: "05. Visual Identity & Mood Design",
-            description: "The overlay is a slight wrongness: lens distortion, floating light, faint yantra geometry, drones under village sound. Stars sit in the wrong pattern. Reflections show the wrong person or century. Mood draws on maya (illusion) and kalachakra (time wheel) — Indian myth as a playable layer, not a texture pass.",
-            images: [
-              "/projects/navam disha envirnment/HighresScreenshot00010.png"
-            ]
+            title: "05. How it should feel",
+            description: "When you tune: a little lens warp, dust in the light, faint yantra on walls, a drone under the village noise. Inside: stars in the wrong pattern, reflections of the wrong year, plants that only exist here. Maya and kalachakra, not a purple dimension shader.\n\nSide bits I like: a sadhu walking backwards through time, a boatman whose river now goes up, a bell that calls people who aren't alive, an observatory where you line up constellations that aren't ours.\n\nRule I wrote at the bottom of the doc: every time they use the compass, show them something they haven't seen. Every time they think they get it, change the rule.",
+            images: [navamShot(10), navamShot(1)]
           }
         ],
         tools: ["Technical Writing", "Level Design", "World Building"]
       }
     ],
     sections: [],
-    gallery: [
-      "/projects/navam disha envirnment/HighresScreenshot00027.png",
-      "/projects/navam disha envirnment/HighresScreenshot00028.png",
-      "/projects/navam disha envirnment/HighresScreenshot00030.png",
-      "/projects/navam disha envirnment/HighresScreenshot00031.png",
-      "/projects/navam disha envirnment/HighresScreenshot00033.png",
-      "/projects/navam disha envirnment/HighresScreenshot00034.png",
-      "/projects/navam disha envirnment/HighresScreenshot00000.png",
-      "/projects/navam disha envirnment/HighresScreenshot00001.png",
-      "/projects/navam disha envirnment/HighresScreenshot00006.png",
-      "/projects/navam disha envirnment/HighresScreenshot00015.png",
-      "/projects/navam disha envirnment/HighresScreenshot00022.png",
-      "/projects/navam disha envirnment/HighresScreenshot00024.png",
-      "/projects/navam disha envirnment/HighresScreenshot00026.png",
-      "/projects/navam disha envirnment/HighresScreenshot00023.png",
-      "/projects/navam disha envirnment/HighresScreenshot00013.png",
-      "/projects/navam disha envirnment/HighresScreenshot00029.png",
-      "/projects/navam disha envirnment/HighresScreenshot00008.png",
-      "/projects/navam disha envirnment/HighresScreenshot00002.png",
-      "/projects/navam disha envirnment/HighresScreenshot00003.png",
-      "/projects/navam disha envirnment/HighresScreenshot00004.png",
-      "/projects/navam disha envirnment/HighresScreenshot00005.png"
-    ]
+    gallery: navamRange(0, 34)
   },
   {
     id: "ai-factory",
@@ -395,7 +390,9 @@ export const projects: Project[] = [
       "/projects/ai-factory/factory_cloud_sync.png",
       "/projects/ai-factory/factory_queue.png",
       "/projects/ai-factory/factory_model_training.png",
-      "/projects/ai-factory/factory_radar.png"
+      "/projects/ai-factory/factory_radar.png",
+      "/projects/ai-factory/factory_studio.png",
+      "/projects/ai-factory/factory_dashboard.png"
     ],
     sections: [
       {
@@ -416,7 +413,7 @@ export const projects: Project[] = [
       {
         title: "04. Cinema & Asset Production",
         description: "Cinema studio, image vault, and GPU queue. Jobs are scheduled, tagged, and stored so large generation runs stay searchable instead of dumping files on disk.",
-        images: ["/projects/ai-factory/factory_cinema_studio.png", "/projects/ai-factory/factory_image_vault.png", "/projects/ai-factory/factory_queue.png"]
+        images: ["/projects/ai-factory/factory_cinema_studio.png", "/projects/ai-factory/factory_image_vault.png", "/projects/ai-factory/factory_queue.png", "/projects/ai-factory/factory_studio.png"]
       },
       {
         title: "05. Workflow Orchestration",
