@@ -1,12 +1,11 @@
 import { motion } from "motion/react";
 import { ChevronDown, ArrowRight } from "lucide-react";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { usePersona } from "../context/PersonaContext";
 
 export default function Hero() {
   const { persona } = usePersona();
   const navigate = useNavigate();
-  const location = useLocation();
 
   const isBoth = persona === 'BOTH';
   
@@ -131,7 +130,7 @@ export default function Hero() {
                 </p>
               </div>
               <h3 className="font-display font-black text-xl md:text-5xl uppercase tracking-tighter leading-tight group-hover:text-brand transition-colors duration-500">
-                {persona === 'AI' ? 'AI Factory' : "Drug Lord's Base"}
+                {persona === 'AI' ? 'AI Factory' : "Silent Echo"}
               </h3>
             </div>
           </div>

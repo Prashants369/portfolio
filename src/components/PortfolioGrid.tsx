@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 import { projects } from "../data";
-import { ArrowUpRight, FileText } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { usePersona } from "../context/PersonaContext";
 import { Project } from "../types";

@@ -1,5 +1,5 @@
 import { experiences, skills, SOCIAL_LINKS } from "../data";
-import { Download, Briefcase, GraduationCap, Code, Cpu, Gamepad2, Sparkles, Layers, Terminal, Bot, Mail, MapPin, Linkedin, Github, Copy, Check } from "lucide-react";
+import { Download, Code, Gamepad2, Layers, Terminal, Bot, Mail, MapPin, Linkedin, Github, Copy, Check } from "lucide-react";
 import { usePersona } from "../context/PersonaContext";
 import { useState } from "react";
 
@@ -33,9 +33,9 @@ export default function ResumeSection() {
   };
 
   const getSummary = () => {
-    if (persona === '3D') return "Environment Artist and Game Designer building high-fidelity worlds in Unreal Engine 5. Focused on PCG frameworks, modular environments, and technical art workflows. Currently completing BCA at Christ College, Rajkot.";
-    if (persona === 'AI') return "AI Developer building automated research pipelines and full-stack web applications. Experienced with Next.js, FastAPI, LLM integration, and generative AI workflows. Currently completing BCA at Christ College, Rajkot.";
-    return "Creative technologist working across 3D environment design and AI automation. Building high-fidelity UE5 worlds and intelligent full-stack systems. Currently completing BCA at Christ College, Rajkot.";
+    if (persona === '3D') return "Environment Artist and Game Designer with hands-on experience building cinematic-quality worlds in Unreal Engine 5. Skilled in PCG frameworks, Gaea terrain generation, modular architecture kits, and Lumen/Nanite pipelines. BCA student at Christ College, Rajkot — graduating 2026.";
+    if (persona === 'AI') return "AI Developer and Full Stack Engineer building automated research pipelines, GPU-accelerated generative AI tools, and production-grade web applications. Proficient in Next.js, FastAPI, Python, TypeScript, and LLM integration. BCA student at Christ College, Rajkot — graduating 2026.";
+    return "Creative Technologist bridging 3D environment design and AI-powered automation. Builds cinematic UE5 worlds with PCG systems and ships full-stack web apps with AI integration. BCA student at Christ College, Rajkot — graduating 2026.";
   };
 
   const copyAsText = () => {
@@ -43,7 +43,8 @@ export default function ResumeSection() {
 PRASHANT SAGATHIYA
 ${getTitle()}
 ${SOCIAL_LINKS.email} | ${SOCIAL_LINKS.linkedin}
-Junagadh, Gujarat, India
+github.com/Prashants369 | ${SOCIAL_LINKS.portfolio || ''}
+Ahmedabad, Gujarat, India
 
 SUMMARY
 ${getSummary()}
@@ -127,16 +128,18 @@ Christ College, Rajkot (Graduating 2026)
                 </div>
                 
                 <div className="flex flex-col gap-2 text-zinc-400 font-mono text-[10px] uppercase tracking-widest">
-                  <a href={`mailto:${SOCIAL_LINKS.email}`} className="flex items-center gap-2 hover:text-white transition-colors">
+                  <a href={`mailto:${SOCIAL_LINKS.email}`} className="flex items-center gap-2 hover:text-brand transition-colors w-fit">
                     <Mail size={12} className="text-brand shrink-0" /> <span className="truncate">{SOCIAL_LINKS.email}</span>
                   </a>
                   <div className="flex items-center gap-2">
-                    <MapPin size={12} className="text-brand shrink-0" /> Junagadh, Gujarat, India
+                    <MapPin size={12} className="text-brand shrink-0" /> Ahmedabad, Gujarat, India
                   </div>
-                  <div className="flex gap-4 mt-2">
-                    <a href={SOCIAL_LINKS.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-brand transition-colors"><Linkedin size={14} /></a>
-                    <a href={SOCIAL_LINKS.github} target="_blank" rel="noopener noreferrer" className="hover:text-brand transition-colors"><Github size={14} /></a>
-                  </div>
+                  <a href={SOCIAL_LINKS.github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-brand transition-colors w-fit">
+                    <Github size={12} className="text-brand shrink-0" /> github.com/Prashants369
+                  </a>
+                  <a href={SOCIAL_LINKS.linkedin} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-brand transition-colors w-fit">
+                    <Linkedin size={12} className="text-brand shrink-0" /> linkedin.com/in/prashant-sagathiya
+                  </a>
                 </div>
               </div>
             </div>
@@ -224,7 +227,8 @@ Christ College, Rajkot (Graduating 2026)
           </div>
           <div className="text-right text-[9px] font-bold uppercase tracking-widest space-y-1">
             <p>{SOCIAL_LINKS.email}</p>
-            <p>Junagadh, Gujarat, India</p>
+            <p>Ahmedabad, Gujarat, India</p>
+            <p>github.com/Prashants369</p>
             <p>linkedin.com/in/prashant-sagathiya</p>
           </div>
         </div>

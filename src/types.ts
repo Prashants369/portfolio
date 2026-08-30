@@ -1,5 +1,11 @@
 export type Persona = '3D' | 'AI' | 'BOTH';
 
+export interface ProjectSection {
+  title: string;
+  description?: string;
+  images: string[];
+}
+
 export interface ProjectVariant {
   id: string;
   label: string;
@@ -8,12 +14,9 @@ export interface ProjectVariant {
   description: string;
   longDescription?: string;
   gallery?: string[];
-  sections?: {
-    title: string;
-    description?: string;
-    images: string[];
-  }[];
+  sections?: ProjectSection[];
   tools: string[];
+  highlights?: string[];
 }
 
 export interface Project {
@@ -25,17 +28,16 @@ export interface Project {
   description: string;
   longDescription?: string;
   gallery?: string[];
-  sections?: {
-    title: string;
-    description?: string;
-    images: string[];
-  }[];
-  variants?: ProjectVariant[]; // Support for combined sections
+  sections?: ProjectSection[];
+  variants?: ProjectVariant[];
   downloadUrl?: string;
+  liveUrl?: string;
+  githubUrl?: string;
   tools: string[];
   year: string;
   role?: string;
   client?: string;
+  highlights?: string[];
 }
 
 export interface Experience {
