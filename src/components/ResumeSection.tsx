@@ -33,9 +33,9 @@ export default function ResumeSection() {
   };
 
   const getSummary = () => {
-    if (persona === '3D') return "Environment Artist and Game Designer with hands-on experience building cinematic-quality worlds in Unreal Engine 5. Skilled in PCG frameworks, Gaea terrain generation, modular architecture kits, and Lumen/Nanite pipelines. BCA student at Christ College, Rajkot — graduating 2026.";
-    if (persona === 'AI') return "AI Developer and Full Stack Engineer building automated research pipelines, GPU-accelerated generative AI tools, and production-grade web applications. Proficient in Next.js, FastAPI, Python, TypeScript, and LLM integration. BCA student at Christ College, Rajkot — graduating 2026.";
-    return "Creative Technologist bridging 3D environment design and AI-powered automation. Builds cinematic UE5 worlds with PCG systems and ships full-stack web apps with AI integration. BCA student at Christ College, Rajkot — graduating 2026.";
+    if (persona === '3D') return "Environment Artist and Game Designer building worlds in Unreal Engine 5 — PCG, Gaea terrain, modular kits, Lumen/Nanite. BCA finished March 2026 (Christ College, Rajkot). Currently MCA at Silver Oak University, Ahmedabad.";
+    if (persona === 'AI') return "AI Developer and Full Stack Engineer building research pipelines, generative tools, and web apps (Next.js, FastAPI, Python, TypeScript). BCA finished March 2026 (Christ College, Rajkot). Currently MCA at Silver Oak University, Ahmedabad.";
+    return "Creative technologist: UE5 environments on one side, AI/full-stack tools on the other. BCA finished March 2026 (Christ College, Rajkot). Currently MCA at Silver Oak University, Ahmedabad.";
   };
 
   const copyAsText = () => {
@@ -60,8 +60,11 @@ SKILLS
 ${filteredSkills.map(s => `${s.category}: ${s.items.join(', ')}`).join('\n')}
 
 EDUCATION
+MCA — Computer Applications
+Silver Oak University, Ahmedabad (2026 — Present)
+
 BCA — Computer Applications
-Christ College, Rajkot (Graduating 2026)
+Christ College, Rajkot (Completed March 2026)
     `.trim();
 
     navigator.clipboard.writeText(text);
@@ -176,10 +179,17 @@ Christ College, Rajkot (Graduating 2026)
 
                 <div className="space-y-3">
                   <h3 className="text-[10px] font-mono uppercase tracking-[0.3em] font-black text-zinc-500 border-b border-white/5 pb-2">Education</h3>
-                  <div className="space-y-1">
-                    <p className="text-xs font-bold text-white uppercase">BCA — Computer Applications</p>
-                    <p className="text-[10px] text-zinc-500 font-mono">Christ College, Rajkot</p>
-                    <p className="text-[9px] text-brand/70 font-mono mt-1">Graduating 2026</p>
+                  <div className="space-y-4">
+                    <div className="space-y-1">
+                      <p className="text-xs font-bold text-white uppercase">MCA — Computer Applications</p>
+                      <p className="text-[10px] text-zinc-500 font-mono">Silver Oak University, Ahmedabad</p>
+                      <p className="text-[9px] text-brand/70 font-mono mt-1">2026 — Present</p>
+                    </div>
+                    <div className="space-y-1">
+                      <p className="text-xs font-bold text-white uppercase">BCA — Computer Applications</p>
+                      <p className="text-[10px] text-zinc-500 font-mono">Christ College, Rajkot</p>
+                      <p className="text-[9px] text-brand/70 font-mono mt-1">Completed March 2026</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -250,10 +260,16 @@ Christ College, Rajkot (Graduating 2026)
                 </div>
               ))}
             </div>
-            <div className="space-y-2">
+            <div className="space-y-3">
               <h2 className="text-[10px] font-black uppercase tracking-widest border-b border-black pb-1">Education</h2>
-              <p className="text-[9px] font-black uppercase">BCA — Computer Applications</p>
-              <p className="text-[8px] text-zinc-600">Christ College, Rajkot (Graduating 2026)</p>
+              <div className="space-y-1">
+                <p className="text-[9px] font-black uppercase">MCA — Computer Applications</p>
+                <p className="text-[8px] text-zinc-600">Silver Oak University, Ahmedabad (2026 — Present)</p>
+              </div>
+              <div className="space-y-1">
+                <p className="text-[9px] font-black uppercase">BCA — Computer Applications</p>
+                <p className="text-[8px] text-zinc-600">Christ College, Rajkot (Completed March 2026)</p>
+              </div>
             </div>
           </div>
           <div className="col-span-8 space-y-8">
