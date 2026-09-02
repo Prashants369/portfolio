@@ -50,7 +50,7 @@ export default function PortfolioGrid() {
 
             {/* Category Badge */}
             <div className="absolute top-3 left-3 md:top-4 md:left-4">
-              <span className={`px-2.5 py-1 md:px-3 md:py-1 rounded-full text-[8px] md:text-[10px] font-mono font-bold uppercase tracking-wider border backdrop-blur-md ${project.persona === '3D' ? 'bg-3d-brand/10 border-3d-brand/30 text-3d-brand' : 'bg-ai-brand/10 border-ai-brand/30 text-ai-brand'}`}>
+              <span className="px-2.5 py-1 md:px-3 md:py-1 rounded-full text-[8px] md:text-[10px] font-mono font-bold uppercase tracking-wider border backdrop-blur-md bg-black/40 border-white/15 text-zinc-200">
                 {project.persona === '3D' ? '3D / Game' : 'AI / Web'}
               </span>
             </div>

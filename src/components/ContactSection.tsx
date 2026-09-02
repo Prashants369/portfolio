@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from "motion/react";
-import { Mail, Linkedin, Github, Twitter, ExternalLink, Send, CheckCircle2, AlertCircle } from "lucide-react";
+import { Mail, Linkedin, Github, Send, CheckCircle2, AlertCircle } from "lucide-react";
 import { SOCIAL_LINKS } from "../data";
 import { useState } from "react";
 import type { FormEvent } from "react";
@@ -51,7 +51,7 @@ export default function ContactSection() {
                 LET'S <br /><span className="text-brand">CONNECT.</span>
               </h3>
               <p className="text-zinc-400 text-sm md:text-lg leading-relaxed max-w-md mb-8 md:mb-12">
-                Open to freelance work, internships, and collaboration opportunities in game development, AI automation, and full-stack web projects.
+                Open to internships, freelance, and full-time — environment art, game design, and full-stack / AI work.
               </p>
               
               <div className="flex flex-col gap-6">
@@ -69,8 +69,7 @@ export default function ContactSection() {
                   {[
                     { icon: Linkedin, href: SOCIAL_LINKS.linkedin, label: "LinkedIn" },
                     { icon: Github, href: SOCIAL_LINKS.github, label: "GitHub" },
-                    { icon: Twitter, href: SOCIAL_LINKS.twitter, label: "Twitter" },
-                  ].filter(s => s.href !== "#").map((social, i) => (
+                  ].filter((s) => s.href && s.href !== "#").map((social, i) => (
                     <a 
                       key={i} 
                       href={social.href}
@@ -122,11 +121,11 @@ export default function ContactSection() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div className="space-y-2">
                         <label className="text-[10px] font-mono uppercase tracking-widest text-zinc-500 ml-2">Name</label>
-                        <input type="text" name="name" required placeholder="John Doe" className="w-full bg-white/5 border border-white/10 rounded-xl px-6 py-4 focus:outline-none focus:border-brand/50 transition-colors" />
+                        <input type="text" name="name" required placeholder="Your name" className="w-full bg-white/5 border border-white/10 rounded-xl px-6 py-4 focus:outline-none focus:border-brand/50 transition-colors" />
                       </div>
                       <div className="space-y-2">
                         <label className="text-[10px] font-mono uppercase tracking-widest text-zinc-500 ml-2">Email</label>
-                        <input type="email" name="email" required placeholder="john@example.com" className="w-full bg-white/5 border border-white/10 rounded-xl px-6 py-4 focus:outline-none focus:border-brand/50 transition-colors" />
+                        <input type="email" name="email" required placeholder="you@email.com" className="w-full bg-white/5 border border-white/10 rounded-xl px-6 py-4 focus:outline-none focus:border-brand/50 transition-colors" />
                       </div>
                     </div>
                     <div className="space-y-2">
@@ -163,7 +162,7 @@ export default function ContactSection() {
         </div>
         
         <div className="mt-20 md:mt-32 flex flex-col md:flex-row justify-between items-center gap-8 border-t border-white/5 pt-12 text-zinc-600 text-[10px] md:text-xs font-mono uppercase tracking-widest text-center md:text-left">
-          <p>© {new Date().getFullYear()} prashant.s. Portfolio // v2.0</p>
+          <p>© {new Date().getFullYear()} Prashant Sagathiya</p>
           <div className="flex gap-8">
             <a href={SOCIAL_LINKS.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-brand transition-colors">LinkedIn</a>
             <a href={SOCIAL_LINKS.github} target="_blank" rel="noopener noreferrer" className="hover:text-brand transition-colors">GitHub</a>

@@ -17,7 +17,7 @@ export default function HomePage() {
           {persona === 'BOTH' ? (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
               <div className="space-y-4">
-                <div className="flex items-center gap-4 text-3d-brand">
+                <div className="flex items-center gap-4 text-brand">
                   <Gamepad2 size={28} />
                   <h2 className="text-2xl md:text-3xl font-display font-bold">3D & GAME DESIGN</h2>
                 </div>
@@ -27,7 +27,7 @@ export default function HomePage() {
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {["UE 5", "PCG", "Gaea", "Tech Art", "Level Design"].map(tag => (
-                    <span key={tag} className="px-3 py-1 bg-3d-brand/10 border border-3d-brand/20 rounded-full text-xs text-3d-brand/80">
+                    <span key={tag} className="px-3 py-1 bg-brand/10 border border-brand/20 rounded-full text-xs text-brand/80">
                       {tag}
                     </span>
                   ))}
@@ -35,7 +35,7 @@ export default function HomePage() {
               </div>
 
               <div className="space-y-4">
-                <div className="flex items-center gap-4 text-ai-brand">
+                <div className="flex items-center gap-4 text-brand">
                   <Cpu size={28} />
                   <h2 className="text-2xl md:text-3xl font-display font-bold">AI & WEB DEV</h2>
                 </div>
@@ -45,7 +45,7 @@ export default function HomePage() {
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {["AI Tools", "Automation", "Next.js", "Python", "LLMs"].map(tag => (
-                    <span key={tag} className="px-3 py-1 bg-ai-brand/10 border border-ai-brand/20 rounded-full text-xs text-ai-brand/80">
+                    <span key={tag} className="px-3 py-1 bg-brand/10 border border-brand/20 rounded-full text-xs text-brand/80">
                       {tag}
                     </span>
                   ))}

@@ -60,10 +60,7 @@ export default function Hero() {
           className="lg:col-span-7 flex flex-col gap-6 relative z-20"
         >
           <div className="inline-flex items-center gap-3 px-3 py-1.5 rounded-full glass border-white/5 w-fit">
-            <span className="flex h-2 w-2 relative">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-brand"></span>
-            </span>
+            <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-brand"></span>
             <span className="text-[9px] md:text-[10px] font-mono uppercase tracking-[0.2em] text-zinc-300">
               {heroBadge}
             </span>
@@ -74,7 +71,7 @@ export default function Hero() {
               {heroTitle.top}<br />
               <span className="text-brand text-glow">{heroTitle.bottom}</span>
             </h1>
-            <div className="absolute -left-6 top-2 bottom-2 w-1.5 bg-brand hidden lg:block rounded-full shadow-[0_0_20px_rgba(255,75,75,0.4)]" />
+            <div className="absolute -left-6 top-2 bottom-2 w-px bg-brand/70 hidden lg:block" />
           </div>
           
           <p className="text-sm md:text-lg text-zinc-400 max-w-xl leading-relaxed font-sans border-l-2 border-white/5 pl-4 md:pl-6">

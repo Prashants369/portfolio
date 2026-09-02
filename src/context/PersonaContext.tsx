@@ -15,7 +15,7 @@ export const PersonaProvider: React.FC<{ children: React.ReactNode }> = ({ child
   // Default to BOTH or check localStorage
   const [persona, setPersonaState] = useState<Persona>(() => {
     const saved = localStorage.getItem('portfolio-persona');
-    return (saved as Persona) || '3D';
+    return (saved as Persona) || 'BOTH';
   });
 
   const setPersona = (p: Persona) => {
@@ -23,8 +23,8 @@ export const PersonaProvider: React.FC<{ children: React.ReactNode }> = ({ child
     localStorage.setItem('portfolio-persona', p);
   };
 
-  const themeColor = persona === '3D' ? '#ff4d4d' : persona === 'AI' ? '#00f2ff' : '#ffffff';
-  const themeRGB = persona === '3D' ? '255, 77, 77' : persona === 'AI' ? '0, 242, 255' : '255, 255, 255';
+  const themeColor = persona === 'AI' ? '#9aa7b2' : '#c4a574';
+  const themeRGB = persona === 'AI' ? '154, 167, 178' : '196, 165, 116';
   const is3D = persona === '3D' || persona === 'BOTH';
   const isAI = persona === 'AI' || persona === 'BOTH';
 

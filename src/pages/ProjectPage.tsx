@@ -177,11 +177,7 @@ export default function ProjectPage() {
                   <div className="lg:col-span-8">
                     <div className="flex items-center gap-3 mb-4">
                       <span
-                        className={`px-3 py-1 rounded-full text-[9px] font-mono font-bold uppercase tracking-wider border ${
-                          baseProject.persona === "3D"
-                            ? "bg-3d-brand/10 border-3d-brand/30 text-3d-brand"
-                            : "bg-ai-brand/10 border-ai-brand/30 text-ai-brand"
-                        }`}
+                        className="px-3 py-1 rounded-full text-[9px] font-mono font-bold uppercase tracking-wider border bg-brand/10 border-brand/25 text-brand"
                       >
                         {project.category}
                       </span>

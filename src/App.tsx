@@ -36,12 +36,9 @@ export default function App() {
               <Route path="/portfolio" element={<PortfolioPage />} />
               <Route path="/resume" element={<ResumePage />} />
               <Route path="/project/:id" element={<ProjectPage />} />
+              <Route path="*" element={<HomePage />} />
             </Routes>
           </main>
-          
-          {/* Background grain / texture overlay */}
-          <div className="fixed inset-0 pointer-events-none opacity-[0.03] mix-blend-overlay z-[99]" 
-               style={{ backgroundImage: `url('https://grainy-gradients.vercel.app/noise.svg')` }} />
         </div>
       </BrowserRouter>
     </PersonaProvider>

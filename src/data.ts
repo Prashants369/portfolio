@@ -7,12 +7,16 @@ const navamRange = (from: number, to: number) =>
   Array.from({ length: to - from + 1 }, (_, i) => navamShot(from + i));
 
 export const SOCIAL_LINKS = {
-  linkedin: "https://www.linkedin.com/in/prashant-sagathiya-19bb59323",
+  linkedin: "https://www.linkedin.com/in/prashant-sagathiya-19bb59323/",
   github: "https://github.com/Prashants369",
-  twitter: "https://x.com/prashantsagathiya",
+  twitter: "",
   email: "prashantsagathiya818@gmail.com",
   portfolio: "https://github.com/Prashants369/portfolio"
 };
+
+export const linkedinHandle = SOCIAL_LINKS.linkedin
+  .replace(/^https?:\/\/(www\.)?linkedin\.com\/in\//i, "")
+  .replace(/\/$/, "");
 
 export const projects: Project[] = [
   {

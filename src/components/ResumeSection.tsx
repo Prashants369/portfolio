@@ -1,4 +1,4 @@
-import { experiences, skills, SOCIAL_LINKS } from "../data";
+import { experiences, skills, SOCIAL_LINKS, linkedinHandle } from "../data";
 import { Download, Code, Gamepad2, Layers, Terminal, Bot, Mail, MapPin, Linkedin, Github, Copy, Check } from "lucide-react";
 import { usePersona } from "../context/PersonaContext";
 import { useState } from "react";
@@ -141,7 +141,7 @@ Christ College, Rajkot (Completed March 2026)
                     <Github size={12} className="text-brand shrink-0" /> github.com/Prashants369
                   </a>
                   <a href={SOCIAL_LINKS.linkedin} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-brand transition-colors w-fit">
-                    <Linkedin size={12} className="text-brand shrink-0" /> linkedin.com/in/prashant-sagathiya
+                    <Linkedin size={12} className="text-brand shrink-0" /> linkedin.com/in/{linkedinHandle}
                   </a>
                 </div>
               </div>
@@ -239,7 +239,7 @@ Christ College, Rajkot (Completed March 2026)
             <p>{SOCIAL_LINKS.email}</p>
             <p>Ahmedabad, Gujarat, India</p>
             <p>github.com/Prashants369</p>
-            <p>linkedin.com/in/prashant-sagathiya</p>
+            <p>linkedin.com/in/{linkedinHandle}</p>
           </div>
         </div>
 
