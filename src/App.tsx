@@ -6,6 +6,7 @@ import PortfolioPage from "./pages/PortfolioPage";
 import ResumePage from "./pages/ResumePage";
 import ScrollToTop from "./components/ScrollToTop";
 import { motion, useScroll, useSpring } from "motion/react";
+import { Analytics } from "@vercel/analytics/react";
 
 import { PersonaProvider } from "./context/PersonaContext";
 
@@ -40,6 +41,7 @@ export default function App() {
             </Routes>
           </main>
         </div>
+        <Analytics />
       </BrowserRouter>
     </PersonaProvider>
   );
