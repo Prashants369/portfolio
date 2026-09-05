@@ -12,7 +12,7 @@ export default function HomePage() {
       <Hero />
       
       {/* Intro Section */}
-      <section className="py-16 md:py-24 px-4 md:px-6 bg-zinc-950/30">
+      <section className="py-16 md:py-24 px-4 md:px-6">
         <div className="max-w-7xl mx-auto">
           {persona === 'BOTH' ? (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">

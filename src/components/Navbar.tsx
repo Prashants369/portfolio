@@ -30,7 +30,7 @@ export default function Navbar() {
       animate={{ y: 0 }}
       className="fixed top-0 left-0 right-0 z-50 flex justify-center p-3 md:p-6"
     >
-      <nav className="bg-black/60 backdrop-blur-2xl rounded-full px-4 md:px-7 py-2 md:py-3.5 flex items-center gap-2 md:gap-8 border border-white/10 shadow-2xl max-w-[96vw]">
+      <nav className="bg-[rgba(10,17,14,0.72)] backdrop-blur-2xl rounded-full px-4 md:px-7 py-2 md:py-3.5 flex items-center gap-2 md:gap-8 border border-[rgba(92,224,160,0.12)] shadow-2xl max-w-[96vw]">
         <Link to="/" className="font-display font-black text-lg md:text-2xl tracking-tighter border-r border-white/10 pr-4 md:pr-10 group flex items-center gap-2 shrink-0">
           <span className="whitespace-nowrap lowercase">prashant<span className="text-brand group-hover:animate-pulse">.</span>s</span>
         </Link>

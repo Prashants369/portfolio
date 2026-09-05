@@ -75,7 +75,7 @@ Christ College, Rajkot (Completed March 2026)
   return (
     <div className="resume-container">
       {/* SCREEN VIEW */}
-      <section id="resume" className="py-12 md:py-24 px-4 md:px-6 bg-zinc-950 min-h-screen print:hidden">
+      <section id="resume" className="py-12 md:py-24 px-4 md:px-6 min-h-screen print:hidden">
         <div className="max-w-4xl mx-auto">
           
           {/* Controls */}

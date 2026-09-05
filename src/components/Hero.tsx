@@ -38,7 +38,7 @@ export default function Hero() {
     : "AI ENGINE";
 
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center pt-24 md:pt-20 px-4 md:px-6 overflow-hidden bg-zinc-950">
+    <section className="relative min-h-screen flex flex-col items-center justify-center pt-24 md:pt-20 px-4 md:px-6 overflow-hidden">
       {/* Dynamic Background Gradients */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden -z-10">
         <div className="absolute top-1/4 -left-1/4 w-[300px] md:w-[800px] h-[300px] md:h-[800px] bg-brand/5 rounded-full blur-[100px] md:blur-[160px] animate-pulse" />

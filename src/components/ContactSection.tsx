@@ -1,6 +1,7 @@
 import { motion, AnimatePresence } from "motion/react";
 import { Mail, Linkedin, Github, Send, CheckCircle2, AlertCircle } from "lucide-react";
 import { SOCIAL_LINKS } from "../data";
+import Footer from "./Footer";
 import { useState } from "react";
 import type { FormEvent } from "react";
 
@@ -39,18 +40,18 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-20 md:py-32 px-6">
-      <div className="max-w-7xl mx-auto">
-        <div className="glass rounded-[2rem] p-6 md:p-16 border-white/5 relative overflow-hidden">
+    <section id="contact" className="pt-20 md:pt-32">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="rounded-[2rem] p-6 md:p-16 relative overflow-hidden bg-[#0a1a13] border border-[#18382a]">
           <div className="absolute top-0 right-0 w-64 h-64 bg-brand/10 rounded-full blur-[100px] -z-10 translate-x-1/2 -translate-y-1/2" />
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 items-center">
             <div>
-              <h2 className="text-zinc-500 font-mono text-xs md:text-sm uppercase tracking-[0.3em] mb-4">Get in Touch</h2>
+              <h2 className="text-[#8bbfa0] font-mono text-xs md:text-sm uppercase tracking-[0.3em] mb-4">Get in Touch</h2>
               <h3 className="text-3xl md:text-7xl font-display font-black leading-none mb-6 md:mb-8 uppercase">
                 LET'S <br /><span className="text-brand">CONNECT.</span>
               </h3>
-              <p className="text-zinc-400 text-sm md:text-lg leading-relaxed max-w-md mb-8 md:mb-12">
+              <p className="text-[#8bbfa0] text-sm md:text-lg leading-relaxed max-w-md mb-8 md:mb-12">
                 Open to internships, freelance, and full-time — environment art, game design, and full-stack / AI work.
               </p>
               
@@ -60,7 +61,7 @@ export default function ContactSection() {
                     <Mail size={20} />
                   </div>
                   <div className="min-w-0">
-                    <p className="text-[10px] font-mono text-zinc-500 uppercase tracking-widest">Email Me</p>
+                    <p className="text-[10px] font-mono text-[#658273] uppercase tracking-widest">Email Me</p>
                     <p className="text-lg md:text-xl font-display font-bold truncate">{SOCIAL_LINKS.email}</p>
                   </div>
                 </a>
@@ -120,22 +121,22 @@ export default function ContactSection() {
                   >
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div className="space-y-2">
-                        <label className="text-[10px] font-mono uppercase tracking-widest text-zinc-500 ml-2">Name</label>
-                        <input type="text" name="name" required placeholder="Your name" className="w-full bg-white/5 border border-white/10 rounded-xl px-6 py-4 focus:outline-none focus:border-brand/50 transition-colors" />
+                        <label className="text-[10px] font-mono uppercase tracking-widest text-[#8bbfa0] ml-2">Name</label>
+                        <input type="text" name="name" required placeholder="Your name" className="w-full bg-[#071310] border border-[#18382a] rounded-xl px-6 py-4 text-[#d4f5e2] focus:outline-none focus:border-brand focus:shadow-[0_0_15px_rgba(92,224,160,0.2)] transition-colors" />
                       </div>
                       <div className="space-y-2">
-                        <label className="text-[10px] font-mono uppercase tracking-widest text-zinc-500 ml-2">Email</label>
-                        <input type="email" name="email" required placeholder="you@email.com" className="w-full bg-white/5 border border-white/10 rounded-xl px-6 py-4 focus:outline-none focus:border-brand/50 transition-colors" />
+                        <label className="text-[10px] font-mono uppercase tracking-widest text-[#8bbfa0] ml-2">Email</label>
+                        <input type="email" name="email" required placeholder="you@email.com" className="w-full bg-[#071310] border border-[#18382a] rounded-xl px-6 py-4 text-[#d4f5e2] focus:outline-none focus:border-brand focus:shadow-[0_0_15px_rgba(92,224,160,0.2)] transition-colors" />
                       </div>
                     </div>
                     <div className="space-y-2">
-                      <label className="text-[10px] font-mono uppercase tracking-widest text-zinc-500 ml-2">Message</label>
-                      <textarea name="message" required rows={4} placeholder="Let's talk about your next project..." className="w-full bg-white/5 border border-white/10 rounded-xl px-6 py-4 focus:outline-none focus:border-brand/50 transition-colors resize-none" />
+                      <label className="text-[10px] font-mono uppercase tracking-widest text-[#8bbfa0] ml-2">Message</label>
+                      <textarea name="message" required rows={4} placeholder="Let's talk about your next project..." className="w-full bg-[#071310] border border-[#18382a] rounded-xl px-6 py-4 text-[#d4f5e2] focus:outline-none focus:border-brand focus:shadow-[0_0_15px_rgba(92,224,160,0.2)] transition-colors resize-none" />
                     </div>
                     <button 
                       disabled={status === 'sending'}
                       type="submit" 
-                      className={`w-full py-4 rounded-xl font-bold transition-all shadow-[0_0_20px_rgba(var(--brand-rgb),0.3)] uppercase tracking-widest text-sm flex items-center justify-center gap-3 ${status === 'sending' ? 'bg-zinc-800 text-zinc-500 cursor-not-allowed' : 'bg-brand text-black hover:scale-[1.02] active:scale-95'}`}
+                      className={`w-full py-4 rounded-xl font-bold transition-all shadow-[0_0_20px_rgba(var(--brand-rgb),0.3)] uppercase tracking-widest text-sm flex items-center justify-center gap-3 ${status === 'sending' ? 'bg-[#101b16] text-[#658273] cursor-not-allowed' : 'bg-brand text-[#050d09] hover:scale-[1.02] active:scale-95'}`}
                     >
                       {status === 'sending' ? (
                         <>
@@ -161,14 +162,8 @@ export default function ContactSection() {
           </div>
         </div>
         
-        <div className="mt-20 md:mt-32 flex flex-col md:flex-row justify-between items-center gap-8 border-t border-white/5 pt-12 text-zinc-600 text-[10px] md:text-xs font-mono uppercase tracking-widest text-center md:text-left">
-          <p>© {new Date().getFullYear()} Prashant Sagathiya</p>
-          <div className="flex gap-8">
-            <a href={SOCIAL_LINKS.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-brand transition-colors">LinkedIn</a>
-            <a href={SOCIAL_LINKS.github} target="_blank" rel="noopener noreferrer" className="hover:text-brand transition-colors">GitHub</a>
-          </div>
-        </div>
       </div>
+      <Footer />
     </section>
   );
 }

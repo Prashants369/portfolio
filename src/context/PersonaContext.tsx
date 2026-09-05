@@ -23,8 +23,8 @@ export const PersonaProvider: React.FC<{ children: React.ReactNode }> = ({ child
     localStorage.setItem('portfolio-persona', p);
   };
 
-  const themeColor = persona === 'AI' ? '#9aa7b2' : '#c4a574';
-  const themeRGB = persona === 'AI' ? '154, 167, 178' : '196, 165, 116';
+  const themeColor = persona === 'AI' ? '#e6c280' : '#5ce0a0';
+  const themeRGB = persona === 'AI' ? '230, 194, 128' : '92, 224, 160';
   const is3D = persona === '3D' || persona === 'BOTH';
   const isAI = persona === 'AI' || persona === 'BOTH';
 
